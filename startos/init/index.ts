@@ -5,6 +5,7 @@ import { versionGraph } from '../versions'
 import { actions } from '../actions'
 import { restoreInit } from '../backups'
 import { generateSecrets } from './generateSecrets'
+import { generateConfig } from './generateConfig'
 import { watchCredentials } from './watchCredentials'
 import { taskSetPrimaryUrl } from './taskSetPrimaryUrl'
 
@@ -15,6 +16,7 @@ export const init = sdk.setupInit(
   setDependencies,
   actions,
   generateSecrets,
+  generateConfig,
   watchCredentials,
   taskSetPrimaryUrl,
 )
