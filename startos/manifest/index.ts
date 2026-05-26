@@ -2,19 +2,27 @@ import { setupManifest } from '@start9labs/start-sdk'
 import { long, short } from './i18n'
 
 export const manifest = setupManifest({
-  id: 'hello-world',
-  title: 'Hello World',
-  license: 'MIT',
-  packageRepo: 'https://github.com/Start9Labs/hello-world-startos',
-  upstreamRepo: 'https://github.com/Start9Labs/hello-world',
-  marketingUrl: 'https://start9.com/',
-  donationUrl: 'https://donate.start9.com/',
+  id: 'peertube',
+  title: 'PeerTube',
+  license: 'agpl-3.0',
+  packageRepo: 'https://github.com/saiththerobo/peertube-startos',
+  upstreamRepo: 'https://github.com/Chocobozzz/PeerTube',
+  marketingUrl: 'https://joinpeertube.org/',
+  donationUrl: 'https://joinpeertube.org/en_US/support',
   description: { short, long },
-  volumes: ['main'],
+  volumes: ['main', 'db'],
   images: {
-    'hello-world': {
-      source: { dockerTag: 'ghcr.io/start9labs/hello-world:2.0.0' },
-      arch: ['x86_64', 'aarch64', 'riscv64'],
+    postgres: {
+      source: { dockerTag: 'postgres:17-alpine' },
+      arch: ['x86_64', 'aarch64'],
+    },
+    valkey: {
+      source: { dockerTag: 'valkey/valkey:9-alpine' },
+      arch: ['x86_64', 'aarch64'],
+    },
+    peertube: {
+      source: { dockerTag: 'chocobozzz/peertube:production' },
+      arch: ['x86_64', 'aarch64'],
     },
   },
   alerts: {

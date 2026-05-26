@@ -1,20 +1,20 @@
 export const short = {
-  en_US: 'Bare bones example of a StartOS service',
-  es_ES: 'Ejemplo básico de un servicio de StartOS',
-  de_DE: 'Minimales Beispiel eines StartOS-Dienstes',
-  pl_PL: 'Podstawowy przykład usługi StartOS',
-  fr_FR: "Exemple minimaliste d'un service StartOS",
+  en_US: 'Self-hosted, federated video platform',
+  es_ES: 'Plataforma de vídeo federada y autoalojada',
+  de_DE: 'Selbst gehostete, föderierte Videoplattform',
+  pl_PL: 'Samodzielna, sfederowana platforma wideo',
+  fr_FR: 'Plateforme vidéo auto-hébergée et fédérée',
 }
 
 export const long = {
   en_US:
-    'Hello World is a template service that provides examples of basic StartOS features.',
+    'PeerTube is a free, open-source, and decentralized video platform. It lets you host your own video server and federate with other PeerTube instances using ActivityPub. Upload and share videos, live-stream, manage channels, and interact with the broader Fediverse — all without relying on a centralized service.',
   es_ES:
-    'Hello World es un servicio de plantilla que proporciona ejemplos de las características básicas de StartOS.',
+    'PeerTube es una plataforma de vídeo libre, de código abierto y descentralizada. Permite alojar tu propio servidor de vídeo y federarse con otras instancias PeerTube mediante ActivityPub. Sube y comparte vídeos, transmite en directo, gestiona canales e interactúa con el Fediverso, todo sin depender de un servicio centralizado.',
   de_DE:
-    'Hello World ist ein Vorlagen-Dienst, der Beispiele für grundlegende StartOS-Funktionen bietet.',
+    'PeerTube ist eine freie, quelloffene und dezentrale Videoplattform. Sie ermöglicht es dir, deinen eigenen Videoserver zu hosten und über ActivityPub mit anderen PeerTube-Instanzen zu föderieren. Lade Videos hoch, teile sie, streame live, verwalte Kanäle und interagiere mit dem Fediverse – alles ohne zentralisierte Dienste.',
   pl_PL:
-    'Hello World to szablon usługi, który zawiera przykłady podstawowych funkcji StartOS.',
+    'PeerTube to wolna, otwartoźródłowa i zdecentralizowana platforma wideo. Pozwala hostować własny serwer wideo i federować się z innymi instancjami PeerTube przez ActivityPub. Przesyłaj i udostępniaj filmy, transmituj na żywo, zarządzaj kanałami i wchodź w interakcje z Fediversum bez polegania na scentralizowanych serwisach.',
   fr_FR:
-    'Hello World est un service modèle qui fournit des exemples des fonctionnalités de base de StartOS.',
+    "PeerTube est une plateforme vidéo libre, open-source et décentralisée. Elle vous permet d'héberger votre propre serveur vidéo et de vous fédérer avec d'autres instances PeerTube via ActivityPub. Téléversez et partagez des vidéos, diffusez en direct, gérez des chaînes et interagissez avec le Fédiverse — sans dépendre d'un service centralisé.",
 }
