@@ -52,6 +52,7 @@ export function getPeerTubeEnv(opts: {
     PEERTUBE_SECRET: opts.peertubeSecret,
     PEERTUBE_ADMIN_EMAIL: 'admin@peertube.local',
     PT_INITIAL_ROOT_PASSWORD: opts.adminPassword,
+    PEERTUBE_TRUST_PROXY: '["loopback","uniquelocal"]',
   }
 }
 
