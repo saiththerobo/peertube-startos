@@ -7,7 +7,18 @@ const peertubeLocalConfig = FileHelper.json(
   z.any(),
 )
 
+// Written to a separate file so PeerTube's admin-panel saves never overwrite it.
+const peertubeStaticConfig = FileHelper.json(
+  { base: sdk.volumes.main, subpath: './config/local.json' },
+  z.any(),
+)
+
 export const generateConfig = sdk.setupOnInit(async (effects, kind) => {
+  // trust_proxy: always written so StartOS proxy headers are trusted
+  await peertubeStaticConfig.write(effects, {
+    trust_proxy: ['loopback', 'uniquelocal'],
+  })
+
   if (kind !== 'install') return
 
   const existing = await peertubeLocalConfig.read().once()
