@@ -54,7 +54,7 @@ All three containers share the host network namespace. PeerTube communicates wit
 
 ## Installation and First-Run Flow
 
-1. **Install** — StartOS pulls all three images. `generateSecrets` runs on init and writes `postgresPassword` and `peertubeSecret` to `store.json`.
+1. **Install** — StartOS pulls all three images. `generateSecrets` runs on init and writes `postgresPassword` and `peertubeSecret` to `store.json`. `generateConfig` writes `local-production.json` with transcoding resolutions pre-configured (360p/480p/720p).
 2. **Critical task: Set Admin Password** — `watchCredentials` creates this task because `adminPassword` is not yet set. The user runs the **Set Admin Password** action, which generates a password, stores it in `store.json`, and displays it.
 3. **Primary URL (auto-set)** — `taskSetPrimaryUrl` tries to auto-select the `.local` LAN URL. If none is available, a critical task prompts the user to run **Set Primary URL**.
 4. **Service starts** — PostgreSQL initializes, Valkey starts, PeerTube starts with `PT_INITIAL_ROOT_PASSWORD` from `store.json`. On first boot PeerTube creates the `root` admin with that password.
@@ -76,6 +76,7 @@ Configuration is passed entirely through environment variables. There is no `pro
 | `PEERTUBE_WEBSERVER_HOSTNAME` | parsed from `store.primaryUrl` |
 | `PEERTUBE_WEBSERVER_PORT`   | parsed from `store.primaryUrl` |
 | `PEERTUBE_WEBSERVER_HTTPS`  | parsed from `store.primaryUrl` |
+| `PEERTUBE_TRUST_PROXY`     | `["loopback","uniquelocal"]` (hardcoded) |
 
 `PT_INITIAL_ROOT_PASSWORD` is only applied by PeerTube on the very first database initialization. After that it is ignored. Rotating the admin password requires PeerTube's web interface.
 
@@ -138,7 +139,7 @@ None. PostgreSQL and Valkey run as sidecars within this package.
 
 ## What Is Unchanged from Upstream
 
-The PeerTube container image is used unmodified (`chocobozzz/peertube:production`). No patches are applied. All configuration is injected via environment variables.
+The PeerTube container image is used unmodified (`chocobozzz/peertube:v8.1.8`). No patches are applied. All configuration is injected via environment variables.
 
 ---
 
