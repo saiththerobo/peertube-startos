@@ -1,9 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- Orange background matching PeerTube brand colour -->
-  <rect width="512" height="512" rx="96" fill="#F2690D"/>
-  <!-- White geometric "P" — vertical stem + right-pointing play triangle -->
-  <!-- Stem of the P -->
-  <rect x="148" y="136" width="76" height="240" rx="10" fill="white"/>
-  <!-- Bowl of the P (play-button triangle) -->
-  <polygon points="224,148 224,364 380,256" fill="white"/>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="181" fill="#E9DFDF"/>
+  <!-- Three right-pointing triangles, scaled from the official 34×34 logo -->
+  <!-- Top triangle: black -->
+  <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M165.6,246.0 V105.4 L271.1,175.7 Z"
+        fill="black"/>
+  <!-- Bottom-left triangle: gray -->
+  <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M165.6,386.4 V246.0 L271.1,316.1 Z"
+        fill="#737373"/>
+  <!-- Right triangle: orange -->
+  <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M271.1,316.1 V175.7 L376.5,246.0 Z"
+        fill="#F1680D"/>
 </svg>

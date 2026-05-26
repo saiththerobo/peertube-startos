@@ -50,6 +50,7 @@ export function getPeerTubeEnv(opts: {
     PEERTUBE_WEBSERVER_PORT: String(webserverPort),
     PEERTUBE_WEBSERVER_HTTPS: String(webserverHttps),
     PEERTUBE_SECRET: opts.peertubeSecret,
+    PEERTUBE_ADMIN_EMAIL: 'admin@peertube.local',
     PT_INITIAL_ROOT_PASSWORD: opts.adminPassword,
   }
 }
