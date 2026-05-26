@@ -32,7 +32,7 @@ PeerTube is a free, open-source, and decentralized video platform powered by Act
 
 | Container  | Image                              | Architectures      |
 | ---------- | ---------------------------------- | ------------------ |
-| peertube   | `chocobozzz/peertube:production`   | x86_64, aarch64    |
+| peertube   | `chocobozzz/peertube:v8.1.8`       | x86_64, aarch64    |
 | postgres   | `postgres:17-alpine`               | x86_64, aarch64    |
 | valkey     | `valkey/valkey:9-alpine`           | x86_64, aarch64    |
 
@@ -154,7 +154,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for build instructions and development wo
 package_id: peertube
 containers:
   peertube:
-    image: chocobozzz/peertube:production
+    image: chocobozzz/peertube:v8.1.8
     mounts:
       - main/data -> /data
       - main/config -> /config
