@@ -21,7 +21,7 @@ export const manifest = setupManifest({
       arch: ['x86_64', 'aarch64'],
     },
     peertube: {
-      source: { dockerTag: 'chocobozzz/peertube:v8.1.8' },
+      source: { dockerTag: 'chocobozzz/peertube:v8.2.0' },
       arch: ['x86_64', 'aarch64'],
     },
   },
